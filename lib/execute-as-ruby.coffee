@@ -14,7 +14,7 @@ module.exports =
         line = cursor.getCurrentBufferLine()
         @runRuby(line, (result) ->
             editor.moveCursorToEndOfLine()
-            editor.insertText("\n" + result))
+            editor.insertText(" # => " + result))
     else
         @runRuby(selection, (result) ->
             editor.moveCursorToEndOfLine()
